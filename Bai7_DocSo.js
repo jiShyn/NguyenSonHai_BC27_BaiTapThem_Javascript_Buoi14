@@ -10,6 +10,7 @@ function readNumber() {
    unit = (num % 100) % 10;
 
    if (100 <= num && num <= 999) {
+      // Đọc số hàng trăm
       if (hundred === 1) {
          hundred = "Một";
       } else if (hundred === 2) {
@@ -30,12 +31,14 @@ function readNumber() {
          hundred = "Chín";
       }
 
+      // Đọc số x-00
       if (ten === 0 && unit === 0) {
          ten = "";
          unit = "";
          res.innerHTML = hundred + " trăm " + ten + unit;
       }
 
+      // đọc số x-0-z
       if (ten === 0) {
          ten = "lẻ";
          if (unit === 1) {
@@ -59,56 +62,135 @@ function readNumber() {
          }
          res.innerHTML = hundred + " trăm " + ten + " " + unit;
       } else if (ten === 1) {
+         // đọc số x-1-z
          ten = "mười";
+         if (unit === 1) {
+            unit = "một";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 2) {
+            unit = "hai";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 3) {
+            unit = "ba";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 4) {
+            unit = "bốn";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 5) {
+            unit = "lăm";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 6) {
+            unit = "sáu";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 7) {
+            unit = "bảy";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 8) {
+            unit = "tám";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 9) {
+            unit = "chín";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         } else if (unit === 0) {
+            unit = "";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       } else if (ten === 2) {
+         //đọc số x-2-z
          ten = "hai";
+         if (unit === 0) {
+            unit = "mươi";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       } else if (ten === 3) {
+         //đọc số x-3-z
          ten = "ba";
+         if (unit === 0) {
+            unit = "mươi";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       } else if (ten === 4) {
+         //đọc số x-4-z
          ten = "bốn";
+         if (unit === 0) {
+            unit = "mươi";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       } else if (ten === 5) {
+         //đọc số x-5-z
          ten = "năm";
+         if (unit === 0) {
+            unit = "mươi";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       } else if (ten === 6) {
+         //đọc số x-6-z
          ten = "sáu";
+         if (unit === 0) {
+            unit = "mươi";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       } else if (ten === 7) {
+         //đọc số x-7-z
          ten = "bảy";
+         if (unit === 0) {
+            unit = "mươi";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       } else if (ten === 8) {
+         //đọc số x-8-z
          ten = "tám";
+         if (unit === 0) {
+            unit = "mươi";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       } else if (ten === 9) {
+         //đọc số x-9-z
          ten = "chín";
+         if (unit === 0) {
+            unit = "mươi";
+            res.innerHTML = hundred + " trăm " + ten + " " + unit;
+         }
       }
 
       if (unit === 1) {
+         //đọc số x-y-1
          unit = "mốt";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       } else if (unit === 2) {
+         //đọc số x-y-2
          unit = "hai";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       } else if (unit === 3) {
+         //đọc số x-y-3
          unit = "ba";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       } else if (unit === 4) {
+         //đọc số x-y-4
          unit = "bốn";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       } else if (unit === 5) {
+         //đọc số x-y-5
          unit = "lăm";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       } else if (unit === 6) {
+         //đọc số x-y-6
          unit = "sáu";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       } else if (unit === 7) {
+         //đọc số x-y-7
          unit = "bảy";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       } else if (unit === 8) {
+         //đọc số x-y-8
          unit = "tám";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       } else if (unit === 9) {
+         //đọc số x-y-9
          unit = "chín";
          res.innerHTML = hundred + " trăm " + ten + " mươi " + unit;
       }
-
    } else {
       res.innerHTML = "Nhập lại số thích hợp!!!";
-      // console.log("Nhập lại số thích hợp!!!");
    }
 }
