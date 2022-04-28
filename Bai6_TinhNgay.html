@@ -13,18 +13,22 @@
 	<body>
 		<div class="container">
 			<h1 class="text-center my-5">Tính ngày</h1>
-			<div class="row justify-content-center my3 text-center">
+			<div class="row justify-content-center my-3 text-center">
 				<div class="col-auto">
-					<input type="number" class="text-center rounded p-2" id="" placeholder="Nhập tháng">
+					<input type="number" class="text-center rounded p-2" id="monthInput" placeholder="Nhập tháng">
 				</div>
 
 				<div class="col-auto">
-					<input type="number" class="text-center rounded p-2" id="" placeholder="Nhập năm">
+					<input type="number" class="text-center rounded p-2" id="yearInput" placeholder="Nhập năm">
 				</div>
 
 				<div class="col-auto">
-					<button class="btn btn-primary px-3 py-2 rounded-pill">Tính Ngày</button>
+					<button class="btn btn-primary px-3 py-2 rounded-pill" onclick="calcDate()">Tính Ngày</button>
 				</div>
+			</div>
+
+			<div class="w-50 mx-auto my-5">
+				<p id="res" class="text-center border rounded bg-light py-3 fs-3">Kết quả</p>
 			</div>
 		</div>
 
